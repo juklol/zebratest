@@ -5,15 +5,15 @@
 
 
 //win32
-#include <qtnetwork/qnetworkaccessmanager>
-#include <qtnetwork/qnetworkrequest>
-#include <qtnetwork/qnetworkreply>
+//#include <qtnetwork/qnetworkaccessmanager>
+//#include <qtnetwork/qnetworkrequest>
+//#include <qtnetwork/qnetworkreply>
 
 
 //unix
-//#include <QNetworkAccessManager>
-//#include <QNetworkRequest>
-//#include <QNetworkReply>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
 
 #include <QUrl>
 #include <QEvent>
