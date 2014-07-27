@@ -19,7 +19,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 # linux
 BOOST_LIB_SUFFIX=
 # win32
-BOOST_LIB_SUFFIX=-mgw49-mt-s-1_55
+#BOOST_LIB_SUFFIX=-mgw49-mt-s-1_55
 #
 win32:BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
 win32:BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
