@@ -963,7 +963,7 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
     return pblockOrphan->hashPrevBlock;
 }
 
-// miner's POW block rewards (Note: 1st block = premine of 1%: 50101 coins ,then anti-instamine of 100 blocks)
+// miner's POW block rewards (Note: 1st block = premine of 1% 50101 coins + ico 0.5% 25050 coins ,then anti-instamine of 100 blocks)
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
     int64_t nSubsidy = 51 * COIN;
@@ -988,9 +988,9 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 
 
 
-    if(pindexBest->nHeight < 1)
+    if(pindexBest->nHeight < 1) // Premine + ICO
     {
-        nSubsidy = 50101 * COIN;
+        nSubsidy = (50101+25050) * COIN;
     }
     else if(pindexBest->nHeight < 101)
     {
@@ -2523,7 +2523,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         const char* pszTimestamp = "Zebracoin, put some zebra in your life: har.shield & fur.noir";
         CTransaction txNew;
-        txNew.nTime = 1406473924;
+        txNew.nTime = 1406560165;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2533,7 +2533,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1406473924;
+        block.nTime    = 1406560165;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = 2653138;
 		if(fTestNet)
