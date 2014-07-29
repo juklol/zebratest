@@ -2521,9 +2521,9 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
 
-        const char* pszTimestamp = "Zebracoin, put some zebra in your life: har.shield & fur.noir ftw";
+        const char* pszTimestamp = "Zebracoin, put some zebra in your life: har.shield & fur.noir......";
         CTransaction txNew;
-        txNew.nTime = 1406650275;
+        txNew.nTime = 1406652656;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2533,7 +2533,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1406650275;
+        block.nTime    = 1406652656;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = 3150437;
 		if(fTestNet)
