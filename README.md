@@ -3,8 +3,8 @@
 ZebraCoin is a X11 PoW/PoS-based cryptocurrency.
 
 
-RPC Port: 27063
-P2P Port: 27061
+RPC Port: 28063
+P2P Port: 28061
 
 Algorithm: X11, PoW/PoS, Zebra Block Reward Technology
 
